@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro'
 import "../styles/global.css";
+import { ViewTransitions } from 'astro:transitions';
 interface Props{
 	title:string;
 	description?:string;
@@ -17,6 +18,7 @@ const {title,description = "A community of music producers and enthusiasts",imag
 		<meta name="decription" content={description}/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<ViewTransitions/>
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}/>
 		<title>{title}</title>
